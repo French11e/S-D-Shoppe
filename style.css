@@ -1,11 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
 
 body {
-    background: url(/Assets/bgLogin.png) rgba(0,0,0,0.3);
+    background: url(/Assets/bgLogin.png) rgba(0, 0, 0, 0.3);
     background-blend-mode: multiply;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    min-height: 100vh; 
+    overflow-y: auto; 
+    margin: 0; 
+    padding: 0; 
+}
+
+.navbar {
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    z-index: 1000; 
+    background-color: #f1e8d9; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); 
 }
 
 .nav-link-black {
@@ -22,20 +36,20 @@ body {
 }
 
 .search-bar {
-    max-width: 300px; /* Maximum width */
-    width: 100%; /* Allows it to expand */
+    max-width: 300px; 
+    width: 100%; 
 }
 
 .input-group-text {
-    background-color: #f1e8d9; /* Match the background color */
-    border: 1px solid #d9b65d; /* Match border with input */
-    border-radius: 20px 0 0 20px; /* Rounded corners for the left side */
+    background-color: #f1e8d9; 
+    border: 1px solid #d9b65d; 
+    border-radius: 20px 0 0 20px; 
 }
 
 .form-control {
     border: 1px solid #d9b65d;
-    border-radius: 0 20px 20px 0; /* Rounded corners for the right side */
-    text-align: center; /* Center text in the input */
+    border-radius: 0 20px 20px 0; 
+    text-align: center; 
 }
 
 h1{
@@ -43,3 +57,174 @@ h1{
     font-size: 50px;
     color: #1e1e1e;
 }
+
+/* Card background for the category section */
+.category-card {
+    max-height: 70vh; 
+    overflow-y: auto; 
+    background-color: #b6b3ae; /* Light background color */
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Shadow for depth */
+    margin: 20px 0;
+}
+
+/* Ensure h2 is styled correctly */
+h2 {
+    font-family: "Playfair Display SC", serif;
+    font-weight: 600;
+    font-size: 32px;
+    margin: 70px 0; /* Add margin for spacing */
+}
+
+/* Category section styling */
+.category-card {
+    max-height: 70vh; 
+    overflow-y: auto; 
+    background-color: #b6b3ae; /* Light background color */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Shadow for depth */
+    margin: 20px 0;
+}
+
+/* Ensure categories are displayed in a single row */
+.row {
+    display: flex;
+    justify-content: center; /* Center items horizontally */
+    flex-wrap: wrap; /* Allow items to wrap to the next line if needed */
+    gap: 10px; /* Set a small gap between items */
+    margin: 0; /* Remove margin to keep items close */
+}
+
+/* Style for individual categories */
+.category {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0; 
+    flex: 1 1 120px; 
+    max-width: 120px; 
+    text-align: center; 
+}
+
+.category img {
+    width: 100px; 
+    height: 100px; 
+    border-radius: 50%; 
+    border: 2px solid #1e1e1e; 
+    object-fit: cover; 
+}
+
+.category p {
+    margin-top: 3px; 
+    font-weight: bold;
+    font-size: 16px; 
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .category {
+        flex: 1 1 80px; 
+        max-width: 80px; 
+    }
+
+    .category img {
+        width: 80px;
+        height: 80px; 
+    }
+
+    .category p {
+        font-size: 14px; 
+    }
+}
+
+/* Filter button styling */
+.filter-buttons {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping of buttons */
+    gap: 10px; /* Space between buttons */
+    margin-bottom: 20px;
+    justify-content: center; /* Center the buttons horizontally */
+}
+
+.filter-buttons button {
+    padding: 8px 12px; /* Padding for top/bottom and left/right */
+    border: none;
+    background-color: #f1e8d9; /* Button background color */
+    cursor: pointer;
+    border-radius: 50px; /* Rounded corners */
+    font-weight: bold;
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+    min-width: 10px; /* Minimum width to prevent buttons from getting too small */
+    width: auto; /* Set width to auto to prevent stretching */
+    flex: 0 0 auto; /* Prevent the button from stretching */
+}
+
+/* Hover effect */
+.filter-buttons button:hover {
+    background-color: #ccc; /* Background color on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .filter-buttons {
+        flex-direction: column; /* Stack buttons vertically on smaller screens */
+        gap: 8px; /* Reduce gap between buttons */
+        align-items: center; /* Center align buttons */
+    }
+
+    .filter-buttons button {
+        width: 150px; /* Fixed width in mobile view */
+        padding: 10px; /* Slightly larger padding for better touch targets */
+        font-size: 14px; /* Increase font size for readability */
+    }
+}
+
+@media (max-width: 480px) {
+    .filter-buttons button {
+        width: 100%; /* Full width on very small screens */
+        max-width: 200px; /* Set a maximum width for consistency */
+        padding: 12px 20px; /* Increase padding for very small screens */
+        font-size: 18px; /* Larger font size for readability */
+    }
+}
+
+/* Fabric items grid */
+.fabric-items {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap onto the next line */
+    justify-content: center; /* Center items horizontally */
+    padding: 10px;
+    max-width: 1000px; /* Set max width for the container */
+    margin: 0 auto; /* Center the container itself */
+    gap: 20px;
+}
+
+.fabric-card {
+    width: 150px; /* Set fixed width for cards */
+    height: auto; /* Allow height to adjust based on content */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.fabric-content {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+}
+
+.fabric-card img {
+    width: 100%; /* Make image fill card */
+    height: auto; /* Allow height to adjust based on image aspect ratio */
+    object-fit: cover; /* Ensure image covers area */
+}
+
+.fabric-card p {
+    margin-top: 5px;
+    font-weight: bold;
+    font-size: 14px;
+    text-align: center; /* Center text below image */
+    color: #1e1e1e;
+}
+
