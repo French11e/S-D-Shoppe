@@ -58,15 +58,48 @@ h1{
     font-size: 50px;
     color: #1e1e1e;
 }
-.dropdown-menu {
-    background-color: #ffffff;
+
+/* Account Dropdown Styling */
+.navbar .dropdown-menu {
+    border-radius: 8px;
+    padding: 0;
+    min-width: 150px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
-.dropdown-item:hover {
-    background-color: #f8f9fa;
+/* Account Dropdown Styling */
+.navbar .dropdown-menu {
+    border-radius: 11px; 
+    padding: 0;
+    min-width: 150px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    overflow: hidden; 
 }
 
+/* Dropdown Item Styling */
+.navbar .dropdown-item {
+    padding: 10px 16px;
+    font-size: 14px;
+    color: #1e1e1e;
+    transition: background-color 0.3s;
+}
 
+/* Hover Effect with Matching Border Radius */
+.navbar .dropdown-item:hover {
+    background-color: #f1e8d9;
+    border-radius: 0;
+}
+
+/* Logout Text */
+.dropdown-item.text-danger {
+    color: #dc3545;
+    font-weight: bold;
+}
+
+/* Dropdown Divider */
+.dropdown-divider {
+    margin: 0;
+}
 
 /* Product Card Styling */
 .product-container {
