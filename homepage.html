@@ -45,15 +45,29 @@
                             <img src="/Assets/svg(icons)/notifications.svg" alt="notif">
                         </a>
                     </li>
+
                     <li class="nav-item">
                         <a class="nav-link nav-link-black" href="#">
-                            <img src="/Assets/svg(icons)/inbox.svg" alt="cart">
+                            <img src="/Assets/svg(icons)/inbox.svg" alt="inbox">
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link nav-link-black" href="#">
-                            <img src="/Assets/svg(icons)/account_circle.svg" alt="cart">
+
+                    <!-- New Account Dropdown Menu -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link nav-link-black dropdown-toggle" href="#" id="accountDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="/Assets/svg(icons)/account_circle.svg" alt="account">
                         </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="accountDropdown">
+                            <li>
+                                <a class="dropdown-item" href="#">Account & Security</a>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li>
+                                <a class="dropdown-item text-danger" href="#">Logout</a>
+                            </li>
+                        </ul>
                     </li>
                 </ul>
             </div>
@@ -116,7 +130,7 @@
     <div class="fabric-items">
         <div class="fabric-card">
             <div class="fabric-content">
-                <a href="#"><img src="/Assets/fabrics/gingham-blue.jpg" alt="Fabric 1"></a>
+                <a href="product.html"><img src="/Assets/fabrics/gingham-blue.jpg" alt="Fabric 1"></a>
                 <p>Gingham Blue</p>
             </div>
         </div>
