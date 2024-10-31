@@ -101,6 +101,176 @@ h1{
     margin: 0;
 }
 
+/* Card background for the category section */
+.category-card {
+    max-height: 70vh; 
+    overflow-y: auto; 
+    background-color: #b6b3ae; 
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); 
+    margin: 20px 0;
+}
+
+/* Ensure h2 is styled correctly */
+h2 {
+    font-family: "Playfair Display SC", serif;
+    font-weight: 600;
+    font-size: 32px;
+    margin: 70px 0;
+}
+
+/* Category section styling */
+.category-card {
+    max-height: 70vh; 
+    overflow-y: auto; 
+    background-color: #b6b3ae;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    margin: 20px 0;
+}
+
+/* Ensure categories are displayed in a single row */
+.row {
+    display: flex;
+    justify-content: center; 
+    flex-wrap: wrap; 
+    gap: 10px; 
+    margin: 0; 
+}
+
+/* Style for individual categories */
+.category {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0; 
+    flex: 1 1 120px; 
+    max-width: 120px; 
+    text-align: center; 
+}
+
+.category img {
+    width: 100px; 
+    height: 100px; 
+    border-radius: 50%; 
+    border: 2px solid #1e1e1e; 
+    object-fit: cover; 
+}
+
+.category p {
+    margin-top: 3px; 
+    font-weight: bold;
+    font-size: 16px; 
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .category {
+        flex: 1 1 80px; 
+        max-width: 80px; 
+    }
+
+    .category img {
+        width: 80px;
+        height: 80px; 
+    }
+
+    .category p {
+        font-size: 14px; 
+    }
+}
+
+/* Filter button styling */
+.filter-buttons {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 10px; 
+    margin-bottom: 20px;
+    justify-content: center; 
+}
+
+.filter-buttons button {
+    padding: 8px 12px; 
+    border: none;
+    background-color: #f1e8d9; 
+    cursor: pointer;
+    border-radius: 50px; 
+    font-weight: bold;
+    transition: background-color 0.3s; 
+    min-width: 10px; 
+    width: auto; 
+    flex: 0 0 auto; 
+}
+
+/* Hover effect */
+.filter-buttons button:hover {
+    background-color: #ccc; 
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .filter-buttons {
+        flex-direction: column; 
+        gap: 8px;
+        align-items: center; 
+    }
+
+    .filter-buttons button {
+        width: 150px; 
+        padding: 10px; 
+        font-size: 14px; 
+    }
+}
+
+@media (max-width: 480px) {
+    .filter-buttons button {
+        width: 100%; 
+        max-width: 200px; 
+        padding: 12px 20px; 
+        font-size: 18px; 
+    }
+}
+
+/* Fabric items grid */
+.fabric-items {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; 
+    padding: 10px;
+    max-width: 1000px; 
+    margin: 0 auto; 
+    gap: 20px;
+}
+
+.fabric-card {
+    width: 150px; 
+    height: auto; 
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.fabric-content {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+}
+
+.fabric-card img {
+    width: 100%; 
+    height: auto; 
+    object-fit: cover; 
+}
+
+.fabric-card p {
+    margin-top: 5px;
+    font-weight: bold;
+    font-size: 14px;
+    text-align: center; /* Center text below image */
+    color: #1e1e1e;
+}
+
 /* Product Card Styling */
 .product-container {
     
@@ -113,6 +283,7 @@ h1{
 }
 
 .product-card {
+    display: flex; /* Make the product card a flex container */
     margin-top: 90px;
     max-width: 800px;
     width: 100%;
@@ -121,6 +292,7 @@ h1{
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
     padding: 20px;
     position: relative; 
+    align-items: center; /* Center items vertically */
 }
 
 .btn-close {
@@ -139,11 +311,23 @@ h1{
     color: #e044a5; /* Optional hover color */
 }
 
-.product-image img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    position: relative;
+.product-image {
+    flex: 1; /* Allow the image section to grow */
+    text-align: center; /* Center image horizontally */
+}
+
+.product-details {
+    flex: 1; /* Allow the details section to grow */
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+}
+
+.button-group {
+    display: flex;
+    justify-content: center; /* Center action buttons */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
 }
 
 /* Prev and Next Buttons Positioned Center on Image Sides */
@@ -206,8 +390,6 @@ h1{
     background-color: none; 
     color: #fff; 
 }
-
-
 
 /* Align buttons to left and right of image */
 .button-container .btn-prev {
