@@ -103,28 +103,28 @@ h1{
 
 /* Sidebar Styles */
 #sidebar {
-    background-color: #343a40; /* Dark background for sidebar */
-    color: #f1e8d9; /* Text color */
+    background-color: #343a40; 
+    color: #f1e8d9; 
 }
 
 #sidebar .nav-link {
-    color: #f1e8d9; /* Default link color */
+    color: #f1e8d9; 
 }
 
 #sidebar .nav-link:hover {
-    background-color: #e0cbab; /* Hover background color */
-    color: #1e1e1e; /* Hover text color */
+    background-color: #e0cbab; 
+    color: #1e1e1e; 
 }
 
 #sidebar .nav-link.custom-active {
-    background-color: #f1e8d9 !important; /* Active link background color */
-    color: #1e1e1e !important; /* Active link text color */
+    background-color: #f1e8d9 !important;
+    color: #1e1e1e !important; 
 }
 
 /* Active Link Style for Sidebar */
 #sidebar .nav-link.active {
-    background-color: #e0cbab; /* Active background color */
-    color: #1e1e1e !important; /* Active text color */
+    background-color: #e0cbab; 
+    color: #1e1e1e !important; 
 }
 
 /* General Styles */
