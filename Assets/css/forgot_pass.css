@@ -52,7 +52,7 @@ body {
 
 /* Button styling */
 .btn-primary {
-    background-color: #e044a5;
+    background-color: #1e1e1e;
     border: none;
     padding: 10px;
     border-radius: 8px;
@@ -61,7 +61,7 @@ body {
 }
 
 .btn-primary:hover {
-    background-color: #d1338f;
+    background-color: #525150;
 }
 
 /* Responsive styles for smaller screens */

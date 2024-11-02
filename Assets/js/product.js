@@ -1,3 +1,5 @@
+// Product Page
+
 let currentColorIndex = 0;
 const colors = [
     "/Assets/fabrics/gingham-blue.jpg", // Blue
@@ -39,6 +41,9 @@ document.addEventListener("keydown", function(event) {
     }
 });
 
+
+
+// Cart Page
 
 // Update total price based on quantity and unit price
 function updateTotalPrice(row) {
