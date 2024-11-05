@@ -9,7 +9,7 @@ body {
     min-height: 100vh; 
     overflow-y: auto; 
     margin: 0; 
-    padding: 150px 0 0; /* Add top padding for fixed header */
+    padding: 0; 
 }
 
 .navbar {
@@ -53,37 +53,10 @@ body {
     text-align: center; 
 }
 
-h1 {
+h1{
     font-family: "Playfair Display SC", serif;
-    font-size: 40px;
+    font-size: 50px;
     color: #1e1e1e;
-}
-
-.header-container {
-    position: fixed; 
-    top: 60px; 
-    left: 0;
-    right: 0;
-    z-index: 999; 
-    background-color: #b6b3ae; 
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); 
-    border-radius: 18px;
-}
-
-.card {
-    background-color: transparent; 
-    margin: 0; 
-    text-align: center; 
-    border-radius: 17px;
-}
-
-.table-bordered {
-    border-radius: 5px; 
-    overflow: hidden; 
-}
-
-.custom-padding {
-    padding-top: 30px; 
 }
 
 /* Account Dropdown Styling */
@@ -128,66 +101,100 @@ h1 {
     margin: 0;
 }
 
-.cart-items .cart-item {
-    background-color: #f1e8d9;
-    border-radius: 10px;
-    margin-bottom: 15px;
-    padding: 15px;
+/* Sidebar Styles */
+#sidebar {
+    background-color: #343a40; 
+    color: #f1e8d9; 
 }
 
-.quantity-select {
-    border-radius: 10px;
-    border: 1px solid #d1b894;
-    text-align: center;
-    width: 50px;
+#sidebar .nav-link {
+    color: #f1e8d9; 
 }
 
-.item-total-price {
-    color: #a70000;
-    font-weight: bold;
-    font-size: 20px;
-}
-
-.total-price {
-    font-size: 22px;
-    font-weight: bold;
-    color: #a70000;
-}
-
-.btn-primary,
-.btn-secondary {
-    font-weight: bold;
-    border-radius: 20px;
-}
-
-.btn-outline-danger {
-    font-size: 14px;
-    border-radius: 10px;
-}
-
-.return-button {
-    background-color: #b6b3ae; 
+#sidebar .nav-link:hover {
+    background-color: #e0cbab; 
     color: #1e1e1e; 
-    border: none; 
-    border-radius: 8px; 
-    padding: 10px 20px; 
-    font-size: 16px; 
-    transition: background-color 0.3s ease;
 }
 
-.return-button:hover {
-    background-color: #eed19e; 
-    color: #ffffff; 
-}
-
-/* Cart items table */
-.table {
-    background-color: #f1e8d9;
-    border-color: #d9b65d; /* Optional: Adjust border color if needed */
-}
-
-/* Order Summary card */
-.bg-light {
+#sidebar .nav-link.custom-active {
     background-color: #f1e8d9 !important;
-    border-color: #d9b65d; /* Optional: Adjust border color if needed */
+    color: #1e1e1e !important; 
+}
+
+/* Active Link Style for Sidebar */
+#sidebar .nav-link.active {
+    background-color: #e0cbab; 
+    color: #1e1e1e !important; 
+}
+
+/* General Styles */
+h1 {
+    font-family: "Playfair Display SC", serif;
+    font-size: 50px;
+    color: #1e1e1e;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.order-status-container {
+    background-color: #f1e8d9;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    border: 1px solid #b6b3ae; 
+}
+
+
+/* Order Status Tabs */
+.nav-tabs .nav-link {
+    font-weight: 600;
+    color: #1e1e1e;
+    border-radius: 8px;
+    margin-right: 8px;
+    padding: 8px 16px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-tabs .nav-link.active {
+    background-color: #d9b65d;
+    color: #fff;
+    border: none;
+}
+
+.nav-tabs .nav-link:hover {
+    background-color: #e0cbab;
+    color: #1e1e1e;
+}
+
+/* Search Bar within Tabs */
+.order-status-search-bar {
+    max-width: 200px;
+    margin-right: auto;
+    margin-top: 10px;
+}
+
+.order-status-search-bar .input-group-text {
+    background-color: #f1e8d9;
+    border: 1px solid #d9b65d;
+    border-radius: 20px 0 0 20px;
+}
+
+.order-status-search-bar .form-control {
+    border: 1px solid #d9b65d;
+    border-radius: 0 20px 20px 0;
+    text-align: left;
+}
+
+.order-status-search-bar .form-control:focus {
+    box-shadow: none;
+    border-color: #d9b65d;
 }
