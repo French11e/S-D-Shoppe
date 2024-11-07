@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
+
+body {
+    background: url(/Assets/images/bgLogin.png) rgba(0, 0, 0, 0.3);
+    background-blend-mode: multiply;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh; 
+    overflow-y: auto; 
+    margin: 0; 
+    padding: 0; 
+}
+
+/* Navbar and Dropdown Styling */
+.navbar {
+    background-color: #f1e8d9;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.nav-link-black {
+    color: #1e1e1e !important;
+}
+
+.nav-link-black:hover {
+    color: #e044a5;
+}
+
+/* OWNER and Admin Text Styling */
+.navbar .dropdown .text-muted {
+    font-size: 0.85em;
+    color: #6c757d;
+}
+
+/* Hamburger Icon Styling */
+.nav-item.dropdown .bi-list {
+    font-size: 1.25em;
+}
+
+/* Dropdown Menu Styling */
+.navbar .dropdown-menu {
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.dropdown-item {
+    padding: 10px 16px;
+    font-size: 14px;
+    color: #1e1e1e;
+}
+
+.input-group-text {
+    background-color: #f1e8d9; 
+    border: 1px solid #d9b65d; 
+    border-radius: 20px 0 0 20px; 
+}
+
+.form-control {
+    border: 1px solid #d9b65d;
+    border-radius: 0 20px 20px 0; 
+    text-align: center; 
+}
+
+h1{
+    font-family: "Playfair Display SC", serif;
+    font-size: 50px;
+    color: #1e1e1e;
+}
+
+.dropdown-item:hover {
+    background-color: #f1e8d9;
+}
+
+.dropdown-item.text-danger {
+    color: #dc3545;
+    font-weight: bold;
+}
+
+.dropdown-divider {
+    margin: 0;
+}
+
+
+/* Cards */
+.card {
+    background-color: #faf4e1;
+    border: 1px solid #d1b88a;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    background-color: #f1e8d9;
+    padding: 1.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+/* List Group Item Styling */
+.list-group-item {
+    color: #1e1e1e;
+    background-color: #f1e8d9;
+    border: 2px solid #d9b65d;
+    border-radius: 8px;
+    font-size: 14px;
+    padding: 8px 16px;
+    margin-bottom: 8px; /* Adjust space between buttons */
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    position: relative;
+    z-index: 2; /* Ensure buttons are above other elements */
+}
+
+/* List Group Item Hover */
+.list-group-item:hover {
+    background-color: #e2d1b3;
+    color: #1e1e1e;
+    cursor: pointer;
+    border-color: #d9b65d;
+}
+
+/* List Group Item Active */
+.list-group-item.active {
+    background-color: #e2d1b3;
+    color: #1e1e1e;
+    border-color: #d9b65d;
+}
+
+/* Prevent non-active items from turning white when clicked */
+.list-group-item:not(.active):active {
+    background-color: #f1e8d9 !important;  /* Prevent background from turning white */
+    color: #1e1e1e;
+    border-color: #d9b65d;
+}
+
+/* Remove outline and box shadow from active or focused items */
+.list-group-item:focus, .list-group-item:active {
+    outline: none; /* Remove outline */
+    box-shadow: none; /* Remove box-shadow */
+}
+
+/* Ensure background stays consistent on non-active items */
+.list-group-item:not(.active):focus {
+    background-color: #f1e8d9;  /* Keep background consistent when focused */
+    color: #1e1e1e;
+    border-color: #d9b65d;
+}
+
+/* Handle active item focus */
+.list-group-item.active:focus {
+    background-color: #e2d1b3;
+    color: #1e1e1e;
+    border-color: #d9b65d;
+}
+
+/* Optional: Additional active state for when clicked */
+.list-group-item:active {
+    background-color: #e2d1b3;
+    color: #1e1e1e;
+    border-color: #d9b65d;
+}
+
+
+
+
+
+
+    
+/* Media Query for Sidebar Responsiveness */
+@media (max-width: 768px) {
+    .sidebar {
+        padding: 1rem;
+    }
+
+    .sidebar h5 {
+        font-size: 1.1em;
+    }
+
+    .list-group-item {
+        font-size: 13px;
+    }
+}
