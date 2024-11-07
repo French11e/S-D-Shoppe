@@ -105,10 +105,10 @@ h1{
     border-radius: 8px;
     font-size: 14px;
     padding: 8px 16px;
-    margin-bottom: 8px; /* Adjust space between buttons */
+    margin-bottom: 8px; 
     transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
     position: relative;
-    z-index: 2; /* Ensure buttons are above other elements */
+    z-index: 2; 
 }
 
 /* List Group Item Hover */
@@ -119,29 +119,27 @@ h1{
     border-color: #d9b65d;
 }
 
-/* List Group Item Active */
+
 .list-group-item.active {
     background-color: #e2d1b3;
     color: #1e1e1e;
     border-color: #d9b65d;
 }
 
-/* Prevent non-active items from turning white when clicked */
+
 .list-group-item:not(.active):active {
-    background-color: #f1e8d9 !important;  /* Prevent background from turning white */
+    background-color: #f1e8d9 !important; 
     color: #1e1e1e;
     border-color: #d9b65d;
 }
 
-/* Remove outline and box shadow from active or focused items */
 .list-group-item:focus, .list-group-item:active {
-    outline: none; /* Remove outline */
-    box-shadow: none; /* Remove box-shadow */
+    outline: none; 
+    box-shadow: none; 
 }
 
-/* Ensure background stays consistent on non-active items */
 .list-group-item:not(.active):focus {
-    background-color: #f1e8d9;  /* Keep background consistent when focused */
+    background-color: #f1e8d9;  
     color: #1e1e1e;
     border-color: #d9b65d;
 }
@@ -153,7 +151,6 @@ h1{
     border-color: #d9b65d;
 }
 
-/* Optional: Additional active state for when clicked */
 .list-group-item:active {
     background-color: #e2d1b3;
     color: #1e1e1e;
