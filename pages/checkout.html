@@ -7,10 +7,10 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/Assets/css/cart.css" />
+    <link rel="stylesheet" href="/pages/checkout.css" />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="icon" href="/Assets/images/sndlogo.png" type="logo" />
-    <title>Shopping Cart</title>
+    <title>Checkout</title>
   </head>
 
   <body class="vh-100">
@@ -94,102 +94,46 @@
       </div>
     </nav>
 
-    <!-- Cart Content -->
-
+    <!-- Checkout Content -->
     <div class="header-container">
       <div class="card text-center">
         <div class="card-body">
-          <h1 class="mb-0 custom-padding">SHOPPING CART</h1>
+          <h1 class="mb-0 custom-padding">CHECKOUT</h1>
         </div>
       </div>
     </div>
+
     <div class="container my-5">
       <div class="row">
-        <!-- Cart Items -->
+        <!-- Shipping Information -->
         <div class="col-lg-8 col-md-12">
-          <table class="table table-bordered">
-            <thead class="table-light">
-              <tr>
-                <th scope="col">
-                  <input type="checkbox" id="select-all" />
-                </th>
-                <th scope="col">Product</th>
-                <th scope="col">Unit Price</th>
-                <th scope="col">Quantity</th>
-                <th scope="col">Total Price</th>
-                <th scope="col">Actions</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>
-                  <input type="checkbox" class="item-checkbox" />
-                </td>
-                <td>
-                  <div class="d-flex align-items-center">
-                    <img
-                      src="/Assets/fabrics/gingham-blue.jpg"
-                      alt="Product Image"
-                      width="80"
-                      class="rounded me-3"
-                    />
-                    <span>Gingham Blue</span>
-                  </div>
-                </td>
-                <td class="unit-price">₱650.00</td>
-                <td>
-                  <input
-                    type="number"
-                    class="form-control quantity-select"
-                    value="1"
-                    min="1"
-                    max="9"
-                  />
-                </td>
-                <td class="item-total-price"></td>
-                <td>
-                  <button class="btn btn-danger btn-sm remove-item">
-                    Remove
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <input type="checkbox" class="item-checkbox" />
-                </td>
-                <td>
-                  <div class="d-flex align-items-center">
-                    <img
-                      src="/Assets/fabrics/gingham-orange.jpg"
-                      alt="Product Image"
-                      width="80"
-                      class="rounded me-3"
-                    />
-                    <span>Gingham Orange</span>
-                  </div>
-                </td>
-                <td class="unit-price">₱650.00</td>
-                <td>
-                  <input
-                    type="number"
-                    class="form-control quantity-select"
-                    value="2"
-                    min="1"
-                    max="9"
-                  />
-                </td>
-                <td class="item-total-price"></td>
-                <td>
-                  <button class="btn btn-danger btn-sm remove-item">
-                    Remove
-                  </button>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          <button class="btn btn-danger btn-sm" id="remove-selected">
-            Remove Selected
-          </button>
+          <form>
+            <h4 class="mb-4">SHIPPING INFORMATION</h4>
+            <div class="mb-3">
+              <label for="full-name" class="form-label">Full Name</label>
+              <input type="text" class="form-control" id="full-name" required />
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email Address</label>
+              <input type="email" class="form-control" id="email" required />
+            </div>
+            <div class="mb-3">
+              <label for="address" class="form-label">Shipping Address</label>
+              <textarea
+                class="form-control"
+                id="address"
+                rows="4"
+                required
+              ></textarea>
+            </div>
+            <div class="mb-3">
+              <label for="contact" class="form-label">Contact Number</label>
+              <input type="tel" class="form-control" id="contact" required />
+            </div>
+            <button type="submit" class="btn btn-success w-100 mt-3">
+              Proceed to Payment
+            </button>
+          </form>
         </div>
 
         <!-- Order Summary -->
@@ -214,13 +158,13 @@
               <h5 class="total-price fw-bold">₱0.00</h5>
             </div>
             <button class="btn btn-success btn-lg w-100 mt-4">
-              Proceed to Checkout
+              Confirm Order
             </button>
             <button
               class="btn return-button w-100 mt-3"
-              onclick="window.location.href='homepage.html'"
+              onclick="window.location.href='shopping-cart.html'"
             >
-              Return
+              Back to Cart
             </button>
           </div>
         </div>
