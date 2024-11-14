@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
+
+/* Global Styles */
+body {
+    background: url(/Assets/images/) rgba(0, 0, 0, 0.3);
+    background-blend-mode: multiply;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    overflow-x: hidden;  /* Prevent horizontal scroll */
+    margin: 0;
+    padding: 0;
+    z-index: 1;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #f1e8d9;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 10px 20px;
+}
+
+/* Dropdown Menu */
+.navbar .dropdown-menu {
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: auto;
+    min-width: 150px;
+    z-index: 1050;
+    background-color: #f1e8d9; /* Match dropdown background */
+    overflow: visible; /* Ensure no scrollbar is shown */
+    max-height: none; /* Remove max-height */
+}
+
+
+/* Dropdown Item Styles */
+.dropdown-item {
+    padding: 10px 16px;
+    font-size: 14px;
+    color: #1e1e1e;
+}
+
+.dropdown-item:hover,
+.dropdown-item.text-danger:hover {
+    background-color: #f1e8d9;
+}
+
+/* Navbar Items */
+.navbar .nav-link-black {
+    color: #1e1e1e !important;
+}
+
+.navbar .nav-link-black:hover {
+    color: #e044a5;
+}
+
+body.dropdown-active {
+    overflow: hidden;
+}
+
+.search-bar .input-group {
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.search-bar .input-group-text {
+    background-color: #f1e8d9;
+    border: 1px solid #d9b65d;
+    border-radius: 20px 0 0 20px;
+}
+
+.search-bar .form-control {
+    border: 1px solid #d9b65d;
+    border-radius: 0 20px 20px 0;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    position: fixed;
+    top: 101px;
+    left: 0;
+    width: 220px;
+    background-color: #f1e8d9;
+    border-left: 1px solid #d9b65d;
+    height: 100vh;
+    z-index: 0;
+    padding: 20px;
+    padding-top: 0; /* Ensure no extra padding above the sidebar */
+    overflow-x: hidden; /* Prevent sidebar overflow */
+}
+
+.sidebar .list-group-item {
+    border: none;
+    background-color: transparent;
+    color: #1e1e1e;
+    padding: 12px 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.sidebar .list-group-item:hover {
+    background-color: #f1e8d9;
+    color: #e044a5;
+}
+
+.sidebar .list-group-item.active {
+    background-color: #d9b65d;
+    color: white;
+    border-radius: 10px;
+}
+
+.sidebar .sidebar-icon {
+    width: 20px;
+    margin-right: 10px;
+}
+
+/* Main Content Styling */
+.container-fluid {
+    margin-left: 0px; /* Keep content offset from the sidebar */
+    padding-top: 80px; /* Offset for the navbar */
+    padding: 0px;
+    overflow-x: hidden; /* Prevent content overflow */
+}
+
+.row.g-3 {
+    gap: 0px;
+}
+
+.card {
+    background-color: #f1e8d9;
+    border: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    top: 90px;
+}
+
+.card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card p {
+    font-size: 16px;
+    color: #333;
+}
+
+.card p:first-child {
+    font-weight: bold;
+}
+
+.card p:last-child {
+    color: #d9b65d;
+}
+
+.mt-3 {
+    margin-top: 1.5rem !important;
+}
+
+/* Responsiveness: Ensure content fits smaller screens */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 200px;
+        padding: 15px;
+    }
+
+    .container-fluid {
+        margin-left: 0; /* Allow full width content on small screens */
+        padding-top: 60px; /* Ensure content does not overlap with fixed navbar */
+    }
+
+    .card {
+        margin-bottom: 15px; /* Add some space between cards */
+    }
+}
