@@ -14,288 +14,484 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <link rel="icon" href="/Assets/images/sndlogo.png" type="logo" />
+    <link rel="stylesheet" href="/di to kasali/style.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
     />
-    <link rel="stylesheet" href="/Admin Dashboard/style.css" />
-    <link rel="icon" href="/Assets/images/sndlogo.png" type="logo" />
-    <title>ADMIN | Dashboard</title>
+    <title>S&D Fabrics</title>
   </head>
   <body class="vh-100">
- <!-- Navbar -->
- <nav class="navbar navbar-expand-lg">
-  <div
-    class="container-fluid d-flex justify-content-between align-items-center"
-  >
-    <!-- Logo -->
-    <a class="navbar-brand fs-4" href="homepage.html">
-      <img src="/Assets/images/sndlogo.png" width="70px" alt="Logo" />
-    </a>
-
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarTogglerDemo01"
-      aria-controls="navbarTogglerDemo01"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
+    <!-- Navbar -->
+    <!-- Navbar -->
+    <nav
+      class="navbar navbar-expand-lg navbar-dark"
+      style="
+        background-color: #f1e8d9;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+      "
     >
-      <span class="navbar-toggler-icon"></span>
-    </button>
+      <div
+        class="container-fluid d-flex justify-content-between align-items-center"
+      >
+        <a class="navbar-brand fs-4" href="/pages/homepage.html">
+          <img src="/Assets/images/sndlogo.png" width="70px" alt="Logo" />
+        </a>
 
-    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-      <div class="mx-auto d-flex justify-content-center flex-grow-1">
-        <form class="search-bar" role="search">
-          <div class="input-group">
-            <span class="input-group-text" id="basic-addon1">
-              <i class="bi bi-search search-icon"></i>
-            </span>
-            <input
-              class="form-control"
-              type="search"
-              placeholder="Search..."
-              aria-label="Search"
-              aria-describedby="basic-addon1"
-            />
-          </div>
-        </form>
-      </div>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarTogglerDemo01"
+          aria-controls="navbarTogglerDemo01"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-      <ul class="navbar-nav ms-auto mb-2 mb-lg-0 d-flex align-items-center">
-        <li class="nav-item">
-          <a class="nav-link nav-link-black" href="#">
-            <img src="/Assets/svg(icons)/notifications.svg" alt="notif" />
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link nav-link-black" href="#">
-            <img src="/Assets/svg(icons)/inbox.svg" alt="inbox" />
-          </a>
-        </li>
-        <!-- Owner Dropdown with Admin Text Below -->
-        <li class="nav-item dropdown d-flex align-items-center">
-          <a
-            class="nav-link nav-link-black"
-            href="#"
-            id="accountDropdown"
-            role="button"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-          >
-            <img
-              src="/Assets/svg(icons)/account_circle.svg"
-              alt="account"
-              class="me-2"
-            />
-          </a>
-          <div class="text-center">
-            <a
-              class="nav-link nav-link-black"
-              href="#"
-              role="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              <div>OWNER</div>
-              <div class="text-muted" style="font-size: 0.85em">Admin</div>
-            </a>
-          </div>
-          <!-- Hamburger Icon for Dropdown -->
-          <a
-            class="nav-link nav-link-black ms-2"
-            href="#"
-            id="accountDropdownToggle"
-            role="button"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-          >
-            <i class="bi bi-list"></i>
-          </a>
-          <!-- Dropdown Menu -->
-          <ul
-            class="dropdown-menu dropdown-menu-end"
-            aria-labelledby="accountDropdown"
-          >
-            <li>
-              <a
-                class="dropdown-item"
-                href="/pages/myAccountPage/myPurchase.html"
-                >My Account</a
-              >
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link nav-link-black" href="#">
+                <img src="/Assets/svg(icons)/notifications.svg" alt="notif" />
+              </a>
             </li>
-            <li><hr class="dropdown-divider" /></li>
-            <li>
-              <a class="dropdown-item text-danger" href="#">Logout</a>
+
+            <li class="nav-item">
+              <a class="nav-link nav-link-black" href="#">
+                <img src="/Assets/svg(icons)/inbox.svg" alt="inbox" />
+              </a>
+            </li>
+
+            <!-- New Account Dropdown Menu -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link nav-link-black dropdown-toggle"
+                href="#"
+                id="accountDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <img
+                  src="/Assets/svg(icons)/account_circle.svg"
+                  alt="account"
+                />
+              </a>
+              <ul
+                class="dropdown-menu dropdown-menu-end"
+                aria-labelledby="accountDropdown"
+              >
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="/pages/myAccountPage/myPurchase.html"
+                    >My Account</a
+                  >
+                </li>
+                <li>
+                  <hr class="dropdown-divider" />
+                </li>
+                <li>
+                  <a class="dropdown-item text-danger" href="#">Logout</a>
+                </li>
+              </ul>
             </li>
           </ul>
-        </li>
-      </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Checkout Content -->
+    <div class="header-container">
+      <div class="card text-center">
+        <div class="card-body">
+          <h1 class="mb-0 custom-padding">BULK ORDER</h1>
+        </div>
+      </div>
     </div>
-  </div>
-</nav>
 
-
-
-    <!-- Sidebar and Content Area -->
-    <div class="container-fluid p-0">
-      <div class="row flex-nowrap vh-100">
-        <!-- Sidebar on the Right -->
-        <div class="col-2 sidebar p-3 position-fixed end-0">
-          <div class="list-group">
-            <a href="#" class="list-group-item list-group-item-action active">
-              <img
-                src="/Assets/svg(icons)/speedometer.svg"
-                alt="Dashboard Icon"
-                class="sidebar-icon"
-              />
-              Dashboard
-            </a>
-            <a></a>
-            <a
-              href="#"
-              class="list-group-item list-group-item-action"
-            >
-              <img
-                src="/Assets/svg(icons)/basket.svg"
-                alt="Product Icon"
-                class="sidebar-icon"
-              />
-              Product
-            </a>
-            <a></a>
-            <a
-              href="#"
-              class="list-group-item list-group-item-action"
-            >
-              <img
-                src="/Assets/svg(icons)/bag-fill.svg"
-                alt="Order Icon"
-                class="sidebar-icon"
-              />
-              Order
-            </a>
-            <a></a>
-            <a href="#" class="list-group-item list-group-item-action">
-              <img
-                src="/Assets/svg(icons)/person-fill.svg"
-                alt="User Icon"
-                class="sidebar-icon"
-              />
-              User
-            </a>
+    <!-- Payment and Delivery Option Content -->
+    <section class="delivery-page container my-5">
+      <div class="payment-delivery-options shadow p-4 mb-5">
+        <h3 class="text-center mb-4">PAYMENT AND DELIVERY OPTION</h3>
+        <div class="row g-3">
+          <!-- PAYMENT METHOD -->
+          <div class="col-md-6">
+            <label class="form-label">PAYMENT METHOD:</label>
+            <select class="form-select shadow-sm" id="payment-option">
+              <option selected>CASH ON DELIVERY</option>
+              <option value="gcash">GCash</option>
+              <option value="maya">Maya</option>
+            </select>
+          </div>
+          <!-- SELECTED DATE -->
+          <div class="col-md-6">
+            <label class="form-label">SELECTED DATE:</label>
+            <input
+              type="text"
+              class="form-control shadow-sm"
+              placeholder="MM/DD/YYYY"
+            />
           </div>
         </div>
 
-        <!-- Main Content Area -->
-        <div class="col-md-10 offset-md-2 p-4">
-          <!-- Dashboard Cards -->
-          <div class="row g-3">
-            <div class="col-md-3">
-              <div class="card p-2">
-                <h5>Total Sales</h5>
-                <p class="fs-1">₱3,500</p>
-              </div>
+        <!-- DELIVERY METHOD -->
+        <div class="delivery-method mt-4">
+          <label class="form-label">DELIVERY METHOD:</label>
+          <div class="d-flex flex-wrap justify-content-around mt-2">
+            <div class="form-check">
+              <input
+                type="radio"
+                id="pickUp"
+                name="deliveryMethod"
+                class="form-check-input"
+                checked
+              />
+              <label for="pickUp" class="form-check-label"
+                >PICK UP IN STORE</label
+              >
             </div>
-            <div class="col-md-3">
-              <div class="card p-2">
-                <h5>Total Income</h5>
-                <p class="fs-1">₱2,800</p>
-              </div>
+            <div class="form-check">
+              <input
+                type="radio"
+                id="lbc"
+                name="deliveryMethod"
+                class="form-check-input"
+              />
+              <label for="lbc" class="form-check-label">LBC</label>
             </div>
-            <div class="col-md-3">
-              <div class="card p-2">
-                <h5>Orders Paid</h5>
-                <p class="fs-1">72</p>
-              </div>
+            <div class="form-check">
+              <input
+                type="radio"
+                id="lalamove"
+                name="deliveryMethod"
+                class="form-check-input"
+              />
+              <label for="lalamove" class="form-check-label">LALAMOVE</label>
             </div>
-            <div class="col-md-3">
-              <div class="card p-2">
-                <h5>Pending Orders</h5>
-                <p class="fs-1">12</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Larger Cards for Main Content -->
-          <div class="row mt-3">
-            <div class="col-md-6">
-              <div class="card p-4">
-                <h5>Recent Orders</h5>
-                <ul>
-                  <li>Order #12345 - Pending</li>
-                  <li>Order #12346 - Completed</li>
-                  <li>Order #12347 - To Ship</li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="card p-4">
-                <h5>Top Products</h5>
-                <ul>
-                  <li>Product A - 120 units</li>
-                  <li>Product B - 100 units</li>
-                  <li>Product C - 85 units</li>
-                </ul>
-              </div>
+            <div class="form-check">
+              <input
+                type="radio"
+                id="jnt"
+                name="deliveryMethod"
+                class="form-check-input"
+              />
+              <label for="jnt" class="form-check-label">JNT</label>
             </div>
           </div>
+        </div>
+      </div>
 
-          <!-- Product Overview -->
-          <div class="row mt-3">
-            <div class="col-md-12">
-              <div class="card p-4">
-                <h5>Product Overview</h5>
-                <p>Total Products: 200</p>
-                <p>Products in Stock: 180</p>
-                <p>Out of Stock: 20</p>
-              </div>
+<div class="container my-3">
+  <div class="row">
+    <!-- Product Details -->
+    <div class="col-lg-6 col-md-12">
+      <div class="product-details border rounded shadow-sm p-3 d-flex flex-column">
+        <h2 class="text-dark mb-3">CRUSH A12-O BEADED LACE</h2>
+
+        <p class="mb-3">
+          <span class="font-weight-bold text-muted">PRICE:</span>
+          <span class="price text-success">P 650.00</span>
+          <span class="text-muted">PER YARD</span>
+        </p>
+
+        <div class="rolls d-flex align-items-center mb-4">
+          <span class="font-weight-bold text-muted me-3">ROLLS:</span>
+          <div class="quantity-container d-flex align-items-center">
+            <input
+              type="number"
+              id="rolls-value"
+              class="form-control form-control-sm text-center"
+              value="5"
+              min="0"
+              style="width: 60px; border: none; outline: none; text-align: center;"
+            />
+            <span class="ms-2">40 YARDS</span>
+          </div>
+        </div>
+
+        <div class="selector mt-3">
+          <span>COLOR</span>
+          <div class="color-row">
+            <button class="btn color-button">WHITE</button>
+            <div class="quantity-control">
+              <button onclick="changeQuantity('white', -1)">-</button>
+              <span id="white">1</span>
+              <button onclick="changeQuantity('white', 1)">+</button>
             </div>
           </div>
-
-          <!-- Orders -->
-          <div class="row mt-3">
-            <div class="col-md-12">
-              <div class="card p-4">
-                <h5>Orders</h5>
-                <table class="table">
-                  <thead>
-                    <tr>
-                      <th>Order #</th>
-                      <th>Product</th>
-                      <th>Status</th>
-                      <th>Price</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>12345</td>
-                      <td>Product A</td>
-                      <td>Pending</td>
-                      <td>₱500</td>
-                    </tr>
-                    <tr>
-                      <td>12346</td>
-                      <td>Product B</td>
-                      <td>Completed</td>
-                      <td>₱300</td>
-                    </tr>
-                    <tr>
-                      <td>12347</td>
-                      <td>Product C</td>
-                      <td>To Ship</td>
-                      <td>₱150</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
+          <div class="color-row">
+            <button class="btn color-button">PINK</button>
+            <div class="quantity-control">
+              <button onclick="changeQuantity('pink', -1)">-</button>
+              <span id="pink">0</span>
+              <button onclick="changeQuantity('pink', 1)">+</button>
+            </div>
+          </div>
+          <div class="color-row">
+            <button class="btn color-button">BLUE</button>
+            <div class="quantity-control">
+              <button onclick="changeQuantity('blue', -1)">-</button>
+              <span id="blue">1</span>
+              <button onclick="changeQuantity('blue', 1)">+</button>
+            </div>
+          </div>
+          <div class="color-row">
+            <button class="btn color-button">RED</button>
+            <div class="quantity-control">
+              <button onclick="changeQuantity('red', -1)">-</button>
+              <span id="red">1</span>
+              <button onclick="changeQuantity('red', 1)">+</button>
+            </div>
+          </div>
+          <div class="color-row">
+            <button class="btn color-button">GOLD</button>
+            <div class="quantity-control">
+              <button onclick="changeQuantity('gold', -1)">-</button>
+              <span id="gold">2</span>
+              <button onclick="changeQuantity('gold', 1)">+</button>
             </div>
           </div>
         </div>
       </div>
     </div>
 
+    <!-- Details Section -->
+    <div class="col-lg-6 col-md-12">
+      <div class="details border rounded shadow-sm p-3 d-flex flex-column">
+        <h3 class="text-dark mb-3">DETAILS</h3>
+        <p>
+          <strong>QUANTITY:</strong>
+          <span class="font-weight-bold">5</span>
+        </p>
+        <p>
+          <strong>COLORS:</strong>
+          <span class="font-weight-bold">WHITE, PINK, BLUE, RED, GOLD</span>
+        </p>
+        <p>
+          <strong>SHIPPING ADDRESS:</strong>
+          <span class="font-weight-bold text-muted">BASTA</span>
+        </p>
+        <hr class="my-3" />
     
+        <div class="subtotal p-3 rounded shadow-sm">
+          <p>
+            <strong>ITEM SUBTOTAL:</strong>
+            <span class="total text-success">P 130,000.00</span>
+          </p>
+          <p>
+            <strong>SHIPPING FEE:</strong>
+            <span class="text-warning">NOT AVAILABLE</span>
+          </p>
+          <p>
+            <strong>SUBTOTAL:</strong>
+            <span class="total text-danger">P 130,000.00</span>
+          </p>
+        </div>
+    
+        <div class="buttons mt-4">
+          <button class="order-btn btn btn-primary btn-lg w-100 mb-3">
+            START ORDER REQUEST
+          </button>
+          <button class="contact-btn btn btn-outline-primary btn-lg w-100">
+            CONTACT SUPPLIER
+          </button>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+    </section>
+
+    <!-- GCash Modal -->
+    <div
+      class="modal fade"
+      id="gcashModal"
+      tabindex="-1"
+      aria-labelledby="gcashModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="gcashModalLabel">
+              GCash Payment Verification
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form id="gcash-form">
+              <div class="mb-3 text-center">
+                <label for="gcash-qr-code" class="form-label">QR Code</label>
+                <div id="gcash-qr-code" class="qr-code-container">
+                  <img
+                    src="/Assets/images/gcash.jpg"
+                    alt="GCash QR Code"
+                    class="qr-code-image"
+                    width="100%"
+                  />
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <label for="gcash-account-name" class="form-label"
+                  >Account Name</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="gcash-account-name"
+                  required
+                />
+              </div>
+
+              <div class="mb-3">
+                <label for="gcash-number" class="form-label"
+                  >GCash Number</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="gcash-number"
+                  required
+                />
+              </div>
+
+              <div class="mb-3">
+                <label for="gcash-reference-number" class="form-label"
+                  >Reference Number</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="gcash-reference-number"
+                  required
+                />
+              </div>
+
+              <div class="mb-3">
+                <label for="gcash-verification-image" class="form-label"
+                  >Upload Picture</label
+                >
+                <input
+                  type="file"
+                  class="form-control"
+                  id="gcash-verification-image"
+                  accept="image/*"
+                  required
+                />
+              </div>
+
+              <button type="submit" class="btn btn-success w-100">
+                Proceed to Payment
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Maya Modal -->
+    <div
+      class="modal fade"
+      id="mayaModal"
+      tabindex="-1"
+      aria-labelledby="mayaModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="mayaModalLabel">
+              Maya Payment Verification
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form id="maya-form">
+              <div class="mb-3 text-center">
+                <label for="maya-qr-code" class="form-label">QR Code</label>
+                <div id="maya-qr-code" class="qr-code-container">
+                  <img
+                    src="/Assets/images/maya.png"
+                    alt="Maya QR Code"
+                    class="qr-code-image"
+                    width="100%"
+                  />
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <label for="maya-account-name" class="form-label"
+                  >Account Name</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="maya-account-name"
+                  required
+                />
+              </div>
+
+              <div class="mb-3">
+                <label for="maya-number" class="form-label">Maya Number</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="maya-number"
+                  required
+                />
+              </div>
+
+              <div class="mb-3">
+                <label for="maya-reference-number" class="form-label"
+                  >Reference Number</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="maya-reference-number"
+                  required
+                />
+              </div>
+
+              <div class="mb-3">
+                <label for="maya-verification-image" class="form-label"
+                  >Upload Picture</label
+                >
+                <input
+                  type="file"
+                  class="form-control"
+                  id="maya-verification-image"
+                  accept="image/*"
+                  required
+                />
+              </div>
+
+              <button type="submit" class="btn btn-success w-100">
+                Proceed to Payment
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
   </body>
 </html>
